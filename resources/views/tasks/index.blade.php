@@ -23,10 +23,9 @@
                 </tr>
                 @endforeach
             </tbody>
-
-            {!! link_to_route('tasks.create','新規タスク登録',[],['class' => 'btn btn-primary']) !!}
-            
         </table>
     @endif
+    
+     {!! link_to_route('tasks.create','新規タスク登録',[],['class' => 'btn btn-primary']) !!}
 
 @endsection
