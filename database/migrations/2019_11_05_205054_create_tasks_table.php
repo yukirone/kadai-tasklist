@@ -12,6 +12,12 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->string('content');  //content カラム追加
             $table->timestamps();
+            $table->string('status', 10);
+             //外部キー制約のためのカラム
+            $table->integer('user_id')->unsigned()->index();
+            
+             // 外部キー制約　データベースの機能
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
